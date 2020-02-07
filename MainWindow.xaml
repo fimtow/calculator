@@ -5,8 +5,66 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="Calculator" Height="260" Width="300">
+    <Border Padding="10">
+        <StackPanel>
+            <TextBox IsEnabled="False" Background="#eee" FontSize="30" Margin="0 0 0 10" TextAlignment="Right"/>
+            <Grid Margin="0 5 0 5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Click="CButton_Click" Grid.Column="0" Content="C" Margin="0 0 5 0"/>
+                <Button Click="EButton_Click" Grid.Column="1" Content="E" Margin="5 0 0 0"/>
+            </Grid>
+            <Grid Margin="0 5 0 5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Click="Button_Click" Grid.Column="0" Content="7" Margin="0 0 10 0"/>
+                <Button Click="Button_Click" Grid.Column="1" Content="8" Margin="0 0 5 0"/>
+                <Button Click="Button_Click" Grid.Column="2" Content="9" Margin="5 0 0 0"/>
+                <Button Click="OpButton_Click"  Grid.Column="3" Content="/" Margin="10 0 0 0"/>
+            </Grid>
+            <Grid Margin="0 5 0 5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Click="Button_Click" Grid.Column="0" Content="4" Margin="0 0 10 0"/>
+                <Button Click="Button_Click" Grid.Column="1" Content="5" Margin="0 0 5 0"/>
+                <Button Click="Button_Click" Grid.Column="2" Content="6" Margin="5 0 0 0"/>
+                <Button Click="OpButton_Click" Grid.Column="3" Content="*" Margin="10 0 0 0"/>
+            </Grid>
+            <Grid Margin="0 5 0 5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Click="Button_Click" Grid.Column="0" Content="1" Margin="0 0 10 0"/>
+                <Button Click="Button_Click" Grid.Column="1" Content="2" Margin="0 0 5 0"/>
+                <Button Click="Button_Click" Grid.Column="2" Content="3" Margin="5 0 0 0"/>
+                <Button Click="OpButton_Click" Grid.Column="3" Content="-" Margin="10 0 0 0"/>
+            </Grid>
+            <Grid Margin="0 5 0 5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Click="Button_Click" Grid.Column="0" Content="." Margin="0 0 10 0"/>
+                <Button Click="Button_Click" Grid.Column="1" Content="0" Margin="0 0 5 0"/>
+                <Button Click="EqButton_Click" Grid.Column="2" Content="=" Margin="5 0 0 0"/>
+                <Button Click="OpButton_Click" Grid.Column="3" Content="+" Margin="10 0 0 0"/>
+            </Grid>
+        </StackPanel>
+    </Border>
 </Window>

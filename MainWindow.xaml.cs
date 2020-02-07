@@ -24,5 +24,30 @@ namespace calculator
         {
             InitializeComponent();
         }
+
+        private void CButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void OpButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EqButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
