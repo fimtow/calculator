@@ -29,15 +29,18 @@ namespace calculator
     {
         double buff = 0.0;
         Operation operation = Operation.ADD;
+        Boolean first = true;
         public MainWindow()
         {
             InitializeComponent();
+            this.screen.Text = Convert.ToString(buff);
         }
 
         private void CButton_Click(object sender, RoutedEventArgs e)
         {
-            this.screen.Text = "";
             buff = 0.0;
+            this.screen.Text = Convert.ToString(buff);
+            first = true;
         }
 
         private void EButton_Click(object sender, RoutedEventArgs e)
@@ -47,7 +50,13 @@ namespace calculator
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.screen.Text += (string)((Button)sender).Content;
+            if(first)
+            {
+                this.screen.Text = (string)((Button)sender).Content;
+                first = false;
+            }
+            else
+                this.screen.Text += (string)((Button)sender).Content;
         }
 
         private void OpButton_Click(object sender, RoutedEventArgs e)
@@ -61,7 +70,7 @@ namespace calculator
                 case "+": operation = Operation.ADD; break;
             }
             //this.screen.Text = Convert.ToString(buff);
-            this.screen.Text = "";
+            first = true;
         }
 
         private void EqButton_Click(object sender, RoutedEventArgs e)
@@ -74,6 +83,19 @@ namespace calculator
                 case Operation.DIV: buff /= Convert.ToDouble(this.screen.Text); break;
             }
             this.screen.Text = Convert.ToString(buff);
+            first = true;
         }
+        /*
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                object ob = new object();
+                RoutedEventArgs earg = new RoutedEventArgs();
+                EqButton_Click(ob,earg);
+                
+            }
+        }
+        */
     }
 }
