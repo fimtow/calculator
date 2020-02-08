@@ -1,3 +1,3 @@
 # Calculator
 ## calculator using WFP
-![](Capture.png)
+![](Capture.PNG)
